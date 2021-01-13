@@ -1,5 +1,7 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 
 const resultControllers = require("../controllers/result_controllers.js");
-app.route("/result/:num1").get(resultControllers.result);
+router.route("/result/:num1").get(resultControllers.result);
+
+module.exports = router;
